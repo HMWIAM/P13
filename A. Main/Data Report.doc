@@ -1,0 +1,112 @@
+Time series
+
+1.0 Business Understanding
+
+1.1 Introduction
+
+We introduced the real estate industry in the USA, its valuation etc
+We then proceeded to tell about the ROI of residential and commercial returns.
+We showed why its important in making investments decisions.
+
+1.2 Problem statement
+
+We can up with the problem statement where a stakeholder aims to
+construct residential homes in the USA.
+To achieve this we were tasked to use time series analysis using zillow
+dataset to find the top 10 locations where they can have the highest 
+ROI and have the lowest price volatility.
+
+1.3 Metrics of Success
+
+We will use MAPE(Mean Absolute Percentage Error) here.
+MAPE is choesen due to its ability to provide weighted error values
+It is good at handling outliers
+By utilizing MAPE, we aim to obtain a comprehensive evaluation
+of the model's performance that accounts for both the magnitude
+of errors and the relative proportion they represent. 
+This metric offers a more robust assessment and ensures that 
+outliers do not unduly influence the perception of the model's 
+effectiveness in generating accurate predictions.
+
+Alternative
+Use RMSE instead
+
+1.5 Problem Questions?
+
+1. What are the 10 best locations to invest/construct in the USA?
+(We use the zipcode as the location point)
+2. What makes these locations valuable?
+(Is it the city, metro, the state, the county, ROI, value of properties)
+3. What affect does urbanization have on value of houses
+()
+4. The locations with the highest/lowest volatility?
+(this is to ensure that the value of property remain stable)
+(Use Zipcode and the duration of time passed)
+5. Can we predict the value of property?
+(The point of this project)
+
+1.6 Objectives?
+
+1. Provide effective real estate investment
+recommendations to the stakeholder.
+(Through predicting what the value of property may be)
+2. Increase the real estate investor’s customer base.
+(Through constructing in areas with stable and growing value
+we will attract survey investors/ home buyers who treat there homes 
+as assets.)
+
+2.0 Data Understanding
+We explore the various columns
+
+3.0 Data Preparation
+Imported the libraries
+Loaded the data
+
+3.3 Data cleaning
+
+1. Completeness: 
+Check for missing datasets
+Display the missing data
+Metro had 1043, filled with 'missing' as can be an important indicator.
+Date had 1039, interpolated them
+
+2. Consistency:
+Check for duplicates:
+There were no duplicates
+
+3. Validity:
+Make sure that columns is accurate and appropriate 
+Changed 'RegionName' to 'Zipcode'
+
+4. Uniformity:
+Make sure that the datatype are appropriate for the analysis
+Converted Zipcode(integer) to a string that is categorical
+Zipcode is attached to a physical location. 
+This means that, it should be treated as a location(categorical)
+Also made them all have 5 digits.
+
+Alternative, treat it as a numerical?
+
+Multicollinearity?
+Outliers?
+
+4.0 Data Preprocessing
+
+1. Added the columns ROI and CV
+2. Reshaped the dataset and using the melt data function
+3. Made a new column(Date) using the melt dataset and made it the index
+4. Renamed value column from melted dateset to median house price for easier understanding.
+
+
+5.0  Exploratory Data analysis
+
+As per our objectives, we will use EDA to determine
+
+1. The top 10 zipcodes/location with highest ROI
+2. The zipcodes/locations with high price volatility
+3. The cities/states with highest valued property
+4. Whether urbanization affects property values
+5. The trend of property prices over the years
+
+
+
