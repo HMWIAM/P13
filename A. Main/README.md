@@ -50,5 +50,5 @@ Through this real estate investment analysis, we have leveraged time series anal
 
 ## Contributing
 
-Contributions to this project are welcome. If you find any issues or have suggestions for improvement, please submit a pull request or open an issue in the GitHub repository.
+Contributions to this project are welcome. If you find any issues or have suggestions for improvement, please submit a pull request or open an issue in the GitHub repository..
 
