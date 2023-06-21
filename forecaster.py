@@ -1,4 +1,4 @@
-{
+.astype({
  "cells": [
   {
    "cell_type": "markdown",
@@ -6904,6 +6904,31 @@
   },
   {
    "cell_type": "code",
+   "execution_count": 124,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'C:\\\\Users\\\\User\\\\anaconda3\\\\envs\\\\learn-env\\\\lib\\\\site-packages\\\\fbprophet\\\\__init__.py'"
+      ]
+     },
+     "execution_count": 124,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "import fbprophet\n",
+    "import inspect\n",
+    "\n",
+    "# Get the file path of forecaster.py\n",
+    "file_path = inspect.getfile(fbprophet)\n",
+    "file_path"
+   ]
+  },
+  {
+   "cell_type": "code",
    "execution_count": null,
    "metadata": {},
    "outputs": [],
@@ -6932,3 +6957,4 @@
  "nbformat": 4,
  "nbformat_minor": 2
 }
+np.float)
