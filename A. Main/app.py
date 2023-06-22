@@ -11,7 +11,7 @@ def index():
     return render_template('index.html')
 
 @app.route('/recommend', methods=['POST'])
-def recommend():
+def recommend_cites():
     data = request.get_json()
     city_name = data['city']
     
