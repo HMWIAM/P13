@@ -1,83 +1,48 @@
+Copy code
 <!DOCTYPE html>
 <html>
 <head>
     <title>City Recommendation</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <style>
         body {
+            background-image: url("/home/henry/Desktop/P13/A. Main/House.jpg");
+            background-size: cover;
+            background-position: center;
             font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #7F5A83;
-            transition: background-color 0.5s;
+            margin: 0;
+            padding: 0;
         }
-        
+
         h1 {
             text-align: center;
-            color: #FFF;
-            transition: color 0.5s;
+            margin-top: 50px;
         }
-        
-        form {
+
+        #cityForm {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 50px;
         }
-        
-        label {
-            display: block;
-            margin-bottom: 10px;
-            color: #FFF;
-        }
-        
-        input[type="text"] {
-            width: 300px;
+
+        #cityInput {
             padding: 10px;
             font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            width: 300px;
+            box-sizing: border-box;
         }
-        
-        input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            font-size: 16px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
+
         #result {
-            margin-top: 30px;
             text-align: center;
-            opacity: 0;
-            transition: opacity 0.5s;
-        }
-        
-        #result.fade-in {
-            opacity: 1;
-        }
-        
-        #result h2 {
-            margin-bottom: 10px;
-            color: #333;
-            transition: color 0.5s;
-        }
-        
-        #result p {
-            margin-bottom: 5px;
-            color: #666;
-        }
-        
-        #result.classy {
-            font-family: "Lucida Calligraphy", cursive;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
     <h1>City Recommendation</h1>
     
-    <form id="cityForm" action="/recommend" method="POST">
+    <form id="cityForm" action="{{ url_for('recommend') }}" method="POST">
         <label for="cityInput">Enter a city name:</label>
+        <br>
         <input type="text" id="cityInput" name="city" required>
         <br><br>
         <input type="submit" value="Submit">
@@ -118,8 +83,6 @@
                 console.error('Error:', error);
             });
         });
-        
-        document.addEventListener('mousemove', function(event) {
-            const mouseX = event.clientX;
-            const windowWidth = window.innerWidth;
-            const percentage = (mouseX / windowWidth)
+    </script>
+</body>
+</html>
