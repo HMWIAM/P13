@@ -4,7 +4,7 @@ import pickle
 app = Flask(__name__)
 
 # Load the trained model
-model = pickle.load(open('/home/henry/Desktop/P13/A. Main/model.pkl', 'rb'))
+model = pickle.load(open('/home/henry/Desktop/P13/A. Main/sarima_model_2.pickle', 'rb'))
 
 @app.route('/')
 def index():
